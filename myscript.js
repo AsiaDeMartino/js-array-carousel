@@ -92,17 +92,23 @@ console.log(PREV);
 
     //Pulsate prev
 PREV.addEventListener("click", function(){
-    let activeItem = document.querySelector(`.item-${i}`)
+    let activeItem = document.querySelector(`.item-${i}`);
+    let activeSlide = document.querySelector(`.slide-${i}`);
     activeItem.classList.remove("active");
+    activeSlide.classList.remove("active");
 
     if (i > 0) {
         i--;
         let activeItem = document.querySelector(`.item-${i}`);
+        let activeSlide = document.querySelector(`.slide-${i}`);
         activeItem.classList.add("active");
+        activeSlide.classList.add("active");
     } else {
         i = items.length-1;
         let activeItem = document.querySelector(`.item-${i}`);
+        let activeSlide = document.querySelector(`.slide-${i}`);
         activeItem.classList.add("active");
+        activeSlide.classList.add("active");
     }
     console.log(i);
 })
@@ -113,19 +119,26 @@ PREV.addEventListener("click", function(){
     //Pulsante next
 NEXT.addEventListener("click", function(){
     let activeItem = document.querySelector(`.item-${i}`);
+    let activeSlide = document.querySelector(`.slide-${i}`);
     activeItem.classList.remove("active");
+    activeSlide.classList.remove("active");
 
     if (i < items.length-1) {
         i++
         let activeItem = document.querySelector(`.item-${i}`);
+        let activeSlide = document.querySelector(`.slide-${i}`);
         activeItem.classList.add("active");
+        activeSlide.classList.add("active");
     } else {
         i = 0
         let activeItem = document.querySelector(`.item-${i}`);
+        let activeSlide = document.querySelector(`.slide-${i}`);
         activeItem.classList.add("active");
+        activeSlide.classList.add("active");
     }
     console.log(i);
 })
+
 
 
 

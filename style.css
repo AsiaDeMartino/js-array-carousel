@@ -39,6 +39,10 @@ img{
     position: relative;
 }
 
+.slide img{
+    width: 60vw;
+}
+
 .slide-wrapper .slide{
     display: none;
 }
