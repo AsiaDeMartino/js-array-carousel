@@ -87,25 +87,45 @@ activeItem.classList.add("active");
 const NEXT = document.getElementById("next");
 console.log(NEXT);
 
+const PREV = document.getElementById("prev");
+console.log(PREV);
+
     //Pulsate prev
+PREV.addEventListener("click", function(){
+    let activeItem = document.querySelector(`.item-${i}`)
+    activeItem.classList.remove("active");
+
+    if (i > 0) {
+        i--;
+        let activeItem = document.querySelector(`.item-${i}`);
+        activeItem.classList.add("active");
+    } else {
+        i = items.length-1;
+        let activeItem = document.querySelector(`.item-${i}`);
+        activeItem.classList.add("active");
+    }
+    console.log(i);
+})
 
 
     console.log(i)
 
     //Pulsante next
 NEXT.addEventListener("click", function(){
-    let activeItem = document.querySelector(`.item-${i}`)
+    let activeItem = document.querySelector(`.item-${i}`);
     activeItem.classList.remove("active");
 
     if (i < items.length-1) {
         i++
-        let activeItem = document.querySelector(`.item-${i}`)
-        activeItem.classList.add("active")
+        let activeItem = document.querySelector(`.item-${i}`);
+        activeItem.classList.add("active");
     } else {
         i = 0
-        let activeItem = document.querySelector(`.item-${i}`)
-        activeItem.classList.add("active")
+        let activeItem = document.querySelector(`.item-${i}`);
+        activeItem.classList.add("active");
     }
-    console.log(i)
+    console.log(i);
 })
+
+
 
