@@ -39,6 +39,10 @@ img{
     position: relative;
 }
 
+.slide-wrapper .slide{
+    display: none;
+}
+
 .slide.active{
     display: block;
 }
