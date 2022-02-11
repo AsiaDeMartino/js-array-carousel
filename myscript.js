@@ -12,7 +12,7 @@ const title = [
     'Gran Bretagna',
     'Germania',
     'Paradise'
-]
+];
 
 const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
@@ -20,9 +20,26 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-]
+];
+
 
 //definisco le variabili
-//inserisco le immagini nell'html con array
-//ciclo for + template literal per far scorrere img
-//.addeventListner --> click freccia 
+const ITEMWRAPPER = document.querySelector(".item-wrapper");
+
+
+
+//ciclo for per inserire img
+for (let i = 0; i < items.length; i++) {
+    const ITEM = document.createElement("div");
+    ITEMWRAPPER.append(ITEM);
+    ITEM.classList.add("item-" + (i) , "item" );
+
+    let immagini = document.createElement("img");
+    immagini.src = items[i];
+    ITEM.append(immagini);
+}
+
+console.log(ITEMWRAPPER)
+
+
+
