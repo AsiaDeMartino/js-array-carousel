@@ -80,6 +80,7 @@ img{
     left: 50%;
     top: 1%;
     transform: translateX(-50%);
+    z-index: 100;
 }
 
 .prev{
@@ -87,6 +88,7 @@ img{
     left: 50%;
     bottom: 1%;
     transform: translateX(-50%);
+    z-index: 100;
 }
 
 .prev i{

@@ -53,14 +53,28 @@ for (let i = 0; i < items.length; i++) {
     immagini.src = items[i];
     ITEM.append(immagini);
 
+    const TEXTWRAPPER = document.createElement("div");
+    ITEM.append(TEXTWRAPPER);
+    TEXTWRAPPER.classList.add("testo");
+    
     let titolo = document.createElement("h1");
-    ITEM.append(titolo);
+    TEXTWRAPPER.append(titolo);
     titolo.innerHTML += title[i]
 
     let testo = document.createElement("h4");
-    ITEM.append(testo);
-    testo.innerHTML += text[i]
+    TEXTWRAPPER.append(testo);
+    testo.innerHTML += text[i];
 }
 
+console.log(SLIDEWRAPPER);
 
-console.log(SLIDEWRAPPER)
+
+//dare active alle prime immagini
+let activeSlide = document.querySelector(".slide-0");
+activeSlide.classList.add("active");
+
+let activeItem = document.querySelector(".item-0");
+activeItem.classList.add("active");
+
+
+//rendere funzionante lo slider
