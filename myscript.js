@@ -69,12 +69,43 @@ for (let i = 0; i < items.length; i++) {
 console.log(SLIDEWRAPPER);
 
 
+//reset variabile indice
+let i = 0;
+
+
 //dare active alle prime immagini
-let activeSlide = document.querySelector(".slide-0");
+let activeSlide = document.querySelector(`.slide-${i}`);
 activeSlide.classList.add("active");
 
-let activeItem = document.querySelector(".item-0");
+let activeItem = document.querySelector(`.item-${i}`);
 activeItem.classList.add("active");
 
 
 //rendere funzionante lo slider
+
+    //aggiungere costanti per i pulsanti 
+const NEXT = document.getElementById("next");
+console.log(NEXT);
+
+    //Pulsate prev
+
+
+    console.log(i)
+
+    //Pulsante next
+NEXT.addEventListener("click", function(){
+    let activeItem = document.querySelector(`.item-${i}`)
+    activeItem.classList.remove("active");
+
+    if (i < items.length-1) {
+        i++
+        let activeItem = document.querySelector(`.item-${i}`)
+        activeItem.classList.add("active")
+    } else {
+        i = 0
+        let activeItem = document.querySelector(`.item-${i}`)
+        activeItem.classList.add("active")
+    }
+    console.log(i)
+})
+

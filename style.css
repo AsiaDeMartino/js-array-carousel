@@ -75,31 +75,27 @@ img{
     opacity: 1;
 }
 
-.next{
-    position: absolute;
-    left: 50%;
-    top: 1%;
-    transform: translateX(-50%);
-    z-index: 100;
-}
-
-.prev{
+#next{
     position: absolute;
     left: 50%;
     bottom: 1%;
     transform: translateX(-50%);
     z-index: 100;
-}
-
-.prev i{
     color: white;
     font-size: 30px;
     margin-bottom: 5px;
 }
 
-.next i{
+#prev{
+    position: absolute;
+    left: 50%;
+    top: 1%;
+    transform: translateX(-50%);
+    z-index: 100;
     color: white;
     font-size: 30px;
-    margin-top: 5px;
+    margin-bottom: 5px;
 }
+
+
 
